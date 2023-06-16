@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÁy TÍNH</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 400px;
+            background-color: rgb(16, 16, 29);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .title{
+            background-color: aqua;
+            font-size: 22px;
+            font-weight: bold;
+            color: blue;
+            text-align: center;
+            padding: 7px;
+        }
+        .ketquas{
+            display: flex;
+            justify-content: stretch;
+            height: 60px;
+            border: 1px solid white;
+           
+        }
+        .ketqua{
+            flex-grow: 1;
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+            margin: 5px;
+            background-color: gray;
+           
+            font-weight: 700;
+           
+        }
+        .buttons{
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+        .button{
+            flex-grow: 1;
+            margin: 5px;
+            font-size: 1.5em;
+            color: aliceblue;
+            font-weight: bold;
+            background-color: gray;
+            border-radius: 50%;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">MÁY TÍNH CƠ BẢN</div>
+        <div class="ketquas">
+            <input type="text" class="ketqua" id="ketquainput" >
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="buttonhander(this)">7</button>
+            <button class="button"  onclick="buttonhander(this)">8</button>
+            <button class="button"  onclick="buttonhander(this)" >9</button>
+            <button class="button"  onclick="buttonhander(this)" >*</button>
+        </div>
+        <div class="buttons">
+            <button class="button"onclick="buttonhander(this)">4</button>
+            <button class="button" onclick="buttonhander(this)">5</button>
+            <button class="button" onclick="buttonhander(this)">6</button>
+            <button class="button" onclick="buttonhander(this)">-</button>
+        </div>
+
+        <div class="buttons">
+            <button class="button" onclick="buttonhander(this)">1</button>
+            <button class="button" onclick="buttonhander(this)">2</button>
+            <button class="button" onclick="buttonhander(this)">3</button>
+            <button class="button" onclick="buttonhander(this)">+</button>
+        </div>
+
+        <div class="buttons">
+            <button class="button" onclick="buttonhander(this)">0</button>
+            <button class="button" onclick="buttonhander(this)">AC</button>
+            <button class="button" onclick="buttonhander(this)">=</button>
+            <button class="button" onclick="buttonhander(this)">/</button>
+        </div>
+
+
+    </div>
+</body>
+<script src="maytinh.js"></script>
+
+</html>

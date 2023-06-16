@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 650px;
+            background-color: rgba(41, 40, 40, 0);
+            border: 3px solid gray;
+            border-radius: 10px;
+            margin: 0 auto;
+            margin-top: 50px;
+
+        }
+
+        .stopwatch {
+            background-color: beige;
+            padding: 30px 30px;
+            text-align: center;
+            height: 300px;
+        }
+
+        h1 {
+            color: black;
+            font-weight: bold;
+        }
+
+        .number span {
+            font-size: 70px;
+            color: black;
+            font-weight: 700;
+
+
+        }
+
+        .btn button {
+            padding: 10px 10px;
+            background-color: rgb(73, 18, 191);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            margin: auto;
+            border-radius: 7px;
+            border: none;
+
+            margin: 10px 10px;
+        }
+
+        .btn button:hover {
+            background-color: rgb(22, 119, 204);
+            color:
+                rgb(243, 62, 62);
+            transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu ul li {
+            font-weight: bold;
+            margin-right: 10px;
+            padding: 7px 14px;
+            background-color: rgb(255, 123, 0);
+            border-radius: 7px;
+            color: white
+        }
+
+        .menu ul li:hover {
+            background-color: burlywood;
+            color: rgb(238, 48, 238);
+            transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .tabs .line {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 6px;
+            border-radius: 15px;
+            background-color: #c23564;
+            transition: all 0.2s ease;
+        }
+
+        .tab_item:hover {
+            opacity: 1;
+            background-color: rgba(194, 53, 100, 0.05);
+            border-color: rgba(194, 53, 100, 0.1);
+        }
+
+        .tab_item.active {
+            opacity: 1;
+        }
+
+        .tab_content {
+            padding: 28px 0;
+        }
+
+        .tab_pane {
+            color: #333;
+            display: none;
+        }
+
+        .tab_pane.active {
+            display: block;
+        }
+
+        /* clock */
+        .clock {
+            color: #17D4FE;
+            font-size: 60px;
+            font-family: Orbitron;
+            letter-spacing: 7px;
+            height: 360px;
+            line-height: 300px;
+            text-align: center;
+            background-color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li class="tab_item active">Giờ Quốc Tế</li>
+                <li class="tab_item ">Bấm Giờ</li>
+                <li class="tab_item">Hẹn Giờ</li>
+            </ul>
+
+        </div>
+        <!-- Tab  -->
+        <div class="clock tab_pane active">
+            <div id="MyClockDisplay" class="clock" onload="showTime()">
+            </div>
+        </div>
+        <div class="stopwatch tab_pane">
+            <h1>ĐỒNG HỒ BẤM GIỜ</h1>
+            <div class="number">
+                <span id="hour"><span style="font-size:100px;"></span></span>
+                <span id="minute">00</span>
+                <span style="font-size:100px;">:</span>
+                <span id="second">00</span>
+                <span style="font-size:100px;">,</span>
+                <span id="tens">00</span>
+
+            </div>
+            <div class="btn">
+                <button id="btn_start">BẮT ĐẦU</button>
+                <button id="btn_stop">DỪNG LẠI</button>
+                <button id="btn_reset">CÀI LẠI</button>
+            </div>
+
+        </div>
+        <div class="tab_pane">
+            ...
+
+        </div>
+
+
+    </div>
+</body>
+<script src="stopwatch.js"></script>
+
+</html>
